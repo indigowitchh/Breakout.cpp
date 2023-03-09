@@ -1,3 +1,11 @@
+#include <SFML/Graphics.hpp>
+#include<iostream>
+using namespace std;
+#include "brick.h"
+#include "ball.h"
+
+//------------------------------------------------------------------
+
 brick::brick(int x, int y) {
 	xpos = x;
 	ypos = y;
@@ -11,15 +19,15 @@ void brick::draw(sf::RenderWindow& window) {
 }
 
 ball::ball(int x, int y) {
-	xpos = x;
-	ypos = y;
+	bx = x;
+	by = y;
 }
 
 void ball::draw(sf::RenderWindow& window) {
-	sf::CircleShape ball(100);
-	circ.setFillColor((sf::Color(227,28,121)));
-	circ.setPosition(xpos, ypos);
-	window.draw(circ);
+	sf::CircleShape ball(30);
+	ball.setFillColor((sf::Color(227,28,121)));
+	ball.setPosition(bx, by);
+	window.draw(ball);
 }
 
 //-------------------------------------------------------------------
@@ -36,7 +44,7 @@ brick b9(250, 350);
 brick b10(400, 350);
 
 //instantiate a ball
-ball bb(100, 700);
+ball bb(350, 600);
 
 int main()
 {
