@@ -3,11 +3,10 @@
 
 class ball{
 private:
-	int xpos;
-	int ypos;
+	int bx;
+	int by;
 	sf::CircleShape circ;
 public:
 	ball(int x, int y);
 	void draw(sf::RenderWindow& window);
 };
-
